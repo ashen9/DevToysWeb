@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/ibm-plex-sans-var.woff2) format("woff2");
+}
+
+#__next {
+  @apply flex flex-col bg-light-20 dark:bg-dark-40;
+  min-height: 100vh;
+}

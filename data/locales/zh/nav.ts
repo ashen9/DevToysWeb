@@ -1,0 +1,188 @@
+import {
+  IconAllTools,
+  IconBase64,
+  IconChecksum,
+  IconConverters,
+  IconEncodersDecoders,
+  IconFormatters,
+  IconGenerators,
+  IconGZip,
+  IconHash,
+  IconHtml,
+  IconInspectorCaseConverter,
+  IconJson,
+  IconJWT,
+  IconLoremIpsum,
+  IconMarkdownPreview,
+  IconNumberBase,
+  IconSettings,
+  IconSql,
+  IconText,
+  IconUrl,
+  IconUuid,
+  IconXml,
+} from "../../icon";
+import { Nav } from "../types";
+
+const localePath = "/zh";
+
+export const nav: Nav = [
+  {
+    title: "所有工具",
+    href: `${localePath}/`,
+    icon: IconAllTools,
+  },
+  {
+    title: "类型转换工具",
+    href: `${localePath}/converters`,
+    icon: IconConverters,
+    items: [
+      {
+        title: "JSON <> YAML",
+        longTitle: "JSON <> YAML转换",
+        href: `${localePath}/converters/json-yaml`,
+        icon: IconConverters,
+        desc: "将JSON数据转换为YAML，反之亦然",
+      },
+      {
+        title: "进制变换",
+        longTitle: "进制变换",
+        href: `${localePath}/converters/number-base`,
+        icon: IconNumberBase,
+        desc: "将数字从一种进制转换为另一种进制",
+      },
+    ],
+  },
+  {
+    title: "编码/解码类型工具",
+    href: `${localePath}/encoders-decoders`,
+    icon: IconEncodersDecoders,
+    items: [
+      {
+        title: "HTML",
+        longTitle: "HTML 编码/解码",
+        href: `${localePath}/encoders-decoders/html`,
+        icon: IconHtml,
+        desc: "将所有适用的字符编码或解码为相应的HTML实体",
+      },
+      {
+        title: "URL",
+        longTitle: "URL 编码/解码",
+        href: `${localePath}/encoders-decoders/url`,
+        icon: IconUrl,
+        desc: "将所有适用的字符编码或解码为其相应的URL实体",
+      },
+      {
+        title: "Base 64",
+        longTitle: "Base 64 编码/解码",
+        href: `${localePath}/encoders-decoders/base64`,
+        icon: IconBase64,
+        desc: "编码和解码Base64数据",
+      },
+      {
+        title: "GZip",
+        longTitle: "GZip 圧縮/展开",
+        href: `${localePath}/encoders-decoders/gzip`,
+        icon: IconGZip,
+        desc: "压缩或解压缩字符串",
+      },
+      {
+        title: "JWT 解码",
+        longTitle: "JWT 解码",
+        href: `${localePath}/encoders-decoders/jwt-decoder`,
+        icon: IconJWT,
+        desc: "解码JWT报头，有效载荷和签名",
+      },
+    ],
+  },
+  {
+    title: "格式化类型工具",
+    href: `${localePath}/formatters`,
+    icon: IconFormatters,
+    items: [
+      {
+        title: "JSON",
+        longTitle: "JSON 格式化",
+        href: `${localePath}/formatters/json`,
+        icon: IconJson,
+        desc: "缩进或缩小JSON数据",
+      },
+      {
+        title: "SQL",
+        longTitle: "SQL 格式化",
+        href: `${localePath}/formatters/sql`,
+        icon: IconSql,
+        desc: "缩进SQL查询",
+      },
+      {
+        title: "XML",
+        longTitle: "XML 格式化",
+        href: `${localePath}/formatters/xml`,
+        icon: IconXml,
+        desc: "缩进或缩小XML数据",
+      },
+    ],
+  },
+  {
+    title: "生成类型工具",
+    href: `${localePath}/generators`,
+    icon: IconGenerators,
+    items: [
+      {
+        title: "Hash",
+        longTitle: "Hash 生成器",
+        href: `${localePath}/generators/hash`,
+        icon: IconHash,
+        desc: "根据文本数据计算MD5、SHA1、SHA256和SHA512哈希值",
+      },
+      {
+        title: "UUID",
+        longTitle: "UUID 生成器",
+        href: `${localePath}/generators/uuid`,
+        icon: IconUuid,
+        desc: "生成uuid版本1和4",
+      },
+      {
+        title: "Lorem Ipsum",
+        longTitle: "Lorem Ipsum 生成器",
+        href: `${localePath}/generators/lorem-ipsum`,
+        icon: IconLoremIpsum,
+        desc: "生成Lorem Ipsum占位符文本",
+      },
+      {
+        title: "Checksum",
+        longTitle: "Checksum 生成器",
+        href: `${localePath}/generators/checksum`,
+        icon: IconChecksum,
+        desc: "使用CheckSum基于文件生成散列",
+      },
+    ],
+  },
+  {
+    title: "文本处理类型工具",
+    href: `${localePath}/text`,
+    icon: IconText,
+    items: [
+      {
+        title: "转义/非转义",
+        longTitle: "转义/非转义",
+        href: `${localePath}/text/inspector-case-converter`,
+        icon: IconInspectorCaseConverter,
+        desc: "分析文本并将其转换为不同的情况",
+      },
+      {
+        title: "Markdown 预览",
+        longTitle: "Markdown 预览",
+        href: `${localePath}/text/markdown-preview`,
+        icon: IconMarkdownPreview,
+        desc: "使用类似github的渲染预览Markdown文档",
+      },
+    ],
+  },
+  {
+    title: "设置",
+    href: `${localePath}/settings`,
+    icon: IconSettings,
+    desc: "自定义DevToysWeb外观和感觉",
+  },
+];
